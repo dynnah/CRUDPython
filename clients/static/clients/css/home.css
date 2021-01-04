@@ -1,0 +1,82 @@
+body {
+	background: whitesmoke;
+}
+
+/* menu */
+
+.navbar {
+	box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    background-color: #F5F3F3;
+}
+
+.navbar a {
+	color: #2b3260;	
+}
+
+.navbar a:hover {
+	font-weight: bold;
+	color: #2b3260;
+}
+
+#link {
+	padding-right: 50px;
+}
+
+.img-icon {
+	padding-left: 50px;
+	padding-right: 50px;
+	width: 200px;
+}
+
+/* listagem cliente */
+
+p {
+	color: #2b3260;
+	text-align: center;
+}
+
+.list-clients {
+	margin-top: 50px;
+	margin-bottom: 50px;
+  width:100%
+}
+
+.list-group {
+	display: table;
+  margin: 0 auto;
+}
+
+li {
+	color: #2b3260;
+}
+
+/* linha de separação */
+
+hr {
+	height:1px;
+	width: 75%;
+	border-width:0;
+	background-color: #8c8c8C;
+}
+
+/* novo cliente */
+
+.new-client {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	color: #2b3260;
+	text-align: center;
+}
+
+.client {
+	color: #2b3260;
+	text-align: center;
+}
+
+/* footer */
+
+.page-footer {
+	background-color: #F5F3F3;
+	color: #2b3260;
+	text-align: center;
+}

@@ -1,0 +1,47 @@
+body {
+	background: whitesmoke;
+}
+
+/* titulo */
+
+.title {
+  font-family: 'Roboto', sans-serif;
+	color: #2b3260;
+	text-align: center;
+	font-size: 2.5em;
+	letter-spacing: -.5px;
+  font-weight: bold; 
+  margin-top: 50px;
+}
+
+/* formulario */
+
+/* botoes */
+
+/* delete */
+
+.delete-client {
+  margin-top: 30px;
+  text-align: center;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+	color: #e60707;
+	text-align: center;
+	font-size: 1.5em;
+	letter-spacing: -.5px;
+  font-weight: bold; 
+}
+
+a:hover {
+	color: #e60707;
+}
+
+/* footer */
+
+.page-footer {
+	background-color: #F5F3F3;
+	color: #2b3260;
+	text-align: center;
+}

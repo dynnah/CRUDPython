@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,17 +6,71 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'clients/css/home.css' %}" />
+
+
+    <title>CRUD With Python</title>
+    
 </head>
 <body>
-    <ul>
+ <!-- Menu -->
+ <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'clients/assets/logo.png' %}" class="img-icon">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#" id="link">Página Inicial <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="http://127.0.0.1:8000/" id="link">Clientes</a>
+        <a class="nav-item nav-link" href="http://127.0.0.1:8000/" id="link">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Listagem Clientes --> 
+  <div class="list-clients">
+    <p>Listagem de Clientes</p>
+    <ul class="list-group">
         {% for client in clients %}
             <a href="{% url 'update_client' client.id %}">
-                <li> {{ client.nome }}</li>
+                <li class="list-group-item"> {{ client.nome }}</li>
             </a>
         {% endfor %}
     </ul>
+  </div>
 
-    <a href="{% url 'create_clients' %}">New client</a>
+ <!-- linha separação -->
+
+  <hr>
+
+  <!-- Novo Cliente -->
+  <div class="new-client">
+      <a class="client" href="{% url 'create_clients' %}">Novo Cliente</a>
+  </div>
+   
+  
+  <!-- Footer -->
+
+  <footer class="page-footer">
+    <div class="footer fixed-bottom">
+        © 2021 Copyright: Dynnah Hanna</a>
+    </div>
+  </footer>
+
+
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
